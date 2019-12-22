@@ -24,6 +24,8 @@ public:
 	auto yield_value(TVal const & val);
 	//void retunr
 	//void return_value(TVal const& val);
+
+	void return_void() const;
 	
 
 	TVal mVal = TVal();
@@ -57,10 +59,10 @@ inline auto Promise<TBase>::yield_value(TVal const& val)
 	return std::experimental::suspend_always();
 }
 
-//template<typename TBase>
-//inline void Promise<TBase>::return_void()
-//{
-//}
+template<typename TBase>
+inline void Promise<TBase>::return_void() const
+{
+}
 //
 //template<typename TBase>
 //inline void Promise<TBase>::return_value(TVal const & val)
